@@ -1,0 +1,94 @@
+En el repositorio de GitHub sobre el que se quiere trabajar presionar '>' y se abre una versión se VSCode para editar esos archivos del repositorio
+
+git brach -M <nuevoNombre> -> renombrar la rama
+
+git rm -rf .git     -> deshace el init
+
+git status
+git add
+git add -u            -> cuando se elimina un archivo
+git add -p <archivo>  -> para añair partes de los cambios del archivo (se eligen los trozos)
+git commit -m ""
+git commit -am ""
+git commit --amend -m "Mensaje Nuevo"  -> modificar commit anterior
+(Se pueden añadir otros archivos tambien con git add antes de hacer el amend. Para no modificar el mensaje: git commit --amend --no-edit)
+
+git pull
+git push
+git push origin <nueva-rama> -> crea la rama y hace el push a ella
+git merge
+git merge --abort
+
+--------------------------------------------------------------
+
+git touch <archivo.ext>  -> crea archivo
+git rm <archivo>         -> borra archivo
+git rm -r <directorio>   -> borra directorio con contenido
+
+code . -> para abrir VS
+
+git log                 -> ver commits
+git checkout <hash>     -> vuelves a ese estado
+
+git diff <otraRama>     -> compara 2 ramas para ver las diferencias antes de hacer merge
+
+
+        -- Resert / Revert --
+
+git revert <hash>    -> retoma el estado que habia en ese commit. no modifica el historial de commits
+
+git reset --soft    -> Mueve la referencia de la rama pero mantiene los cambios en el área de preparación.
+git reset --mixed   -> (modo por defecto): Mueve la referencia de la rama y elimina los cambios del área de preparación, pero los mantiene en el directorio de trabajo.
+git reset --hard    -> Mueve la referencia de la rama y elimina los cambios del área de preparación y del directorio de trabajo.
+
+git reset --hard origin/master -> trae el estado que hay en GitHub
+    /* Borrar el repositorio local y dejarlo como el virtual:
+        - git fetch origin                  -> baja lo que hay en remoto
+        - git reset --hard origin/master    -> sobreescribe el local con el remoto
+        - git clean -df                     -> borra archivos demás que quedan en el repo local
+    */
+
+
+
+
+        --Branches/Checkout--
+
+git branch              -> muestra ramas y en la cual estoy
+git branch -d <rama>    -> borra la rama. -d si ha sido fusionada y -D si no.
+- git branch -r                             -> ver ramas remotas
+- git push origin --delete <nombreRama>     -> borra la rama remota
+
+
+git checkout <rama>       -> cambia de rama
+git checkout -b <nombre>  -> crea una rama y te mueve a ella
+git checkout -            -> te mueve a la rama en la que estabas anteriormente
+
+
+
+        -- Stash--
+
+git stash
+git stash -m "nombreExplicativo"
+git pop
+git pop --index
+git stash save <nombre>
+git stash list
+git stash show
+git stash apply <index>
+git stash branch <nombreRama> index     -> crea una rama con los documentos que hay en ese index
+git stash drop index    -> borra lo que hay en ese stash
+git stash clear         -> borra todo lo que hay en el stash
+
+
+git log --graph --oneline --decorate
+
+
+git bisect      -> cuando hay un problema en el commit actual y en el anterior funcionaba la aplicación
+git bisect <nombreCommitAlQueVolver>    --> git bisect bad
+                                        --> git bisect good
+
+git fetch     -> trae del remoto los commits nuevos
+
+
+git rebase main --interactive -> ??  ¿squash?
+

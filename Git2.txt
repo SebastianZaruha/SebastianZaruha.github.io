@@ -1,0 +1,5 @@
+
+git rebase -> pasa los commits de una rama a otra. útil porque en vez de hacer un merge y perder la evolución de esa rama secundaria, mantienes el historial.
+
+
+git fetch
