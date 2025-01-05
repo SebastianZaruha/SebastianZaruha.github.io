@@ -1,52 +1,51 @@
 <div class="container">
   <div class="contenido">
-    <router-outlet />
-
-    <div class="navegador">
-      <nav class="nav flex-column border-left">
-        <a
-          class="nav-link text-dark"
-          routerLink=""
-          [ngClass]="{ active: menuOption == 'inicio' }"
-          (click)="onOption('inicio')"
-          >Inicio</a
-        >
-        <a
-          class="nav-link text-dark"
-          routerLink="conocimientos"
-          [ngClass]="{ active: menuOption == 'conocimientos' }"
-          (click)="onOption('conocimientos')"
-          >Educación</a
-        >
-        <a
-          class="nav-link text-dark"
-          routerLink="sobreMi"
-          [ngClass]="{ active: menuOption == 'sobreMi' }"
-          (click)="onOption('sobreMi')"
-          >Sobre mí</a
-        >
-        <a
-          class="nav-link text-dark"
-          routerLink="faqs"
-          [ngClass]="{ active: menuOption == 'faqs' }"
-          (click)="onOption('faqs')"
-          >FAQs</a
-        >
-        <a
-          class="nav-link text-dark"
-          routerLink="trabajarJuntos"
-          [ngClass]="{ active: menuOption == 'trabajarJuntos' }"
-          (click)="onOption('trabajarJuntos')"
-          >Trabajar juntos</a
-        >
-        <a
-          class="nav-link text-dark"
-          routerLink="contacto"
-          [ngClass]="{ active: menuOption == 'contacto' }"
-          (click)="onOption('contacto')"
-          >Contacto</a
-        >
-      </nav>
-    </div>
+    <router-outlet></router-outlet>
+  </div>
+  <div class="navegador">
+    <nav class="nav">
+      <a
+        class="nav-link text-dark"
+        routerLink=""
+        [ngClass]="{ active: menuOption == 'inicio' }"
+        (click)="onOption('inicio')"
+        >Inicio</a
+      >
+      <a
+        class="nav-link text-dark"
+        routerLink="conocimientos"
+        [ngClass]="{ active: menuOption == 'conocimientos' }"
+        (click)="onOption('conocimientos')"
+        >Educación</a
+      >
+      <a
+        class="nav-link text-dark"
+        routerLink="sobreMi"
+        [ngClass]="{ active: menuOption == 'sobreMi' }"
+        (click)="onOption('sobreMi')"
+        >Sobre mí</a
+      >
+      <a
+        class="nav-link text-dark"
+        routerLink="faqs"
+        [ngClass]="{ active: menuOption == 'faqs' }"
+        (click)="onOption('faqs')"
+        >FAQs</a
+      >
+      <a
+        class="nav-link text-dark"
+        routerLink="trabajarJuntos"
+        [ngClass]="{ active: menuOption == 'trabajarJuntos' }"
+        (click)="onOption('trabajarJuntos')"
+        >Trabajar juntos</a
+      >
+      <a
+        class="nav-link text-dark"
+        routerLink="contacto"
+        [ngClass]="{ active: menuOption == 'contacto' }"
+        (click)="onOption('contacto')"
+        >Contacto</a
+      >
+    </nav>
   </div>
 </div>
