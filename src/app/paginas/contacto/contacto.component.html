@@ -1,0 +1,69 @@
+<div class="container">
+  <div class="contenedorFormulario">
+    <h3>Solicite el curriculum</h3>
+    <form
+      [formGroup]="contactForm"
+      class="formulario"
+      ((submit))="enviar($event)"
+    >
+      <div class="nombre">
+        <label for="validationServer01" class="form-label">Nombre</label>
+        <input
+          type="text"
+          class="form-control"
+          id="validationServer01"
+          value=""
+          formControlName="nombre"
+          [ngClass]="{
+            'is-invalid':
+              hasErrors('nombre', 'required') ||
+              hasErrors('nombre', 'minlength')
+          }"
+        />@if (hasErrors('nombre', 'required')){
+        <span class="text-danger">Debe de completar el campo</span>
+        } @if(hasErrors('nombre', 'minlength')) {
+        <span class="text-danger">Longitud insuficiente</span>
+        }
+      </div>
+      <div class="empresa">
+        <label for="validationServer01" class="form-label">Empresa</label>
+        <input
+          type="text"
+          class="form-control"
+          id="validationServer01"
+          value=""
+          formControlName="empresa"
+          [ngClass]="{
+            'is-invalid':
+              hasErrors('empresa', 'required') ||
+              hasErrors('empresa', 'minlength')
+          }"
+        />@if(hasErrors('empresa','required')){
+        <span class="text-danger">Debe de completar el campo</span>
+        } @if(hasErrors('empresa', 'minlength')) {
+        <span class="text-danger">Longitud insuficiente</span>
+        }
+      </div>
+      <div class="email">
+        <label for="validationServer01" class="form-label">Email</label>
+        <input
+          type="email"
+          class="form-control"
+          id="validationServer01"
+          value=""
+          formControlName="email"
+          [ngClass]="{
+            'is-invalid':
+              hasErrors('email', 'required') || hasErrors('email', 'email')
+          }"
+        />@if (hasErrors('email', 'required')){
+        <span class="text-danger">Debe de completar el campo</span>
+        } @if(hasErrors('email', 'email')) {
+        <span class="text-danger">Formato inválido!</span>
+        }
+      </div>
+
+      <button class="btn btn-secondary" type="submit">Solicitar</button>
+    </form>
+  </div>
+</div>
