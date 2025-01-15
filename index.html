@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="escena">
+      <div class="navegar">
+        <nav class="nav">
+          <a class="nav-link text-dark" href="#aboutme">Sobre mí</a>
+          <a class="nav-link text-dark" href="#conocimientos">Conocimientos</a>
+          <a class="nav-link text-dark" href="#worktogether">Trabajar juntos</a>
+          <a class="nav-link text-dark" href="#contact">Contacto</a>
+        </nav>
+      </div>
+
+      <!-- Contenedor de las secciones -->
+      <div class="secciones">
+        <section id="aboutme">
+          <div class="background-image">
+            <img
+              src="src/fotoperfilPNG.png"
+              alt="Foto de Sebastian"
+              width="400px"
+            />
+          </div>
+          <div class="text-content">
+            <h2>Hola, soy Sebastian</h2>
+            <p>
+              Desarrollador Fullstack Junior con formación especializada en
+              desarrollo de aplicaciones multiplataforma y experiencia en
+              tecnologías de backend y frontend. Poseo una visión integral del
+              ciclo de desarrollo, desde la planificación y diseño hasta la
+              implementación y mantenimiento de soluciones tecnológicas. Me
+              apasiona resolver problemas, aprender nuevas tecnologías y
+              participar en proyectos desafiantes que ofrezcan soluciones
+              escalables y de alto impacto. Trabajo con un enfoque orientado a
+              la calidad, optimización del rendimiento y atención al detalle,
+              asegurando siempre una experiencia sólida para el usuario
+              final./p>
+            </p>
+          </div>
+        </section>
+        <section id="conocimientos">
+          <h2 class="tituloconocimientos">Conocimientos</h2>
+          <div class="tecnico">
+            <h4>Control de versiones</h4>
+            <ul>
+              <li>Git</li>
+              <li>Github</li>
+            </ul>
+            <hr />
+            <h4>Desarrollo Backend</h4>
+            <h5>Lenguajes</h5>
+            <ul>
+              <li>Python</li>
+              <li>Java</li>
+              <li>JavaScript</li>
+              <li>Dart</li>
+            </ul>
+            <hr />
+            <h5>Base de datos</h5>
+            <ul>
+              <li>MySQL</li>
+              <li>PostgreSQL</li>
+              <li>MongoDB</li>
+              <li>Neo4j</li>
+            </ul>
+            <hr />
+            <h4>Desarrollo Frontend</h4>
+            <ul>
+              <li>JavaScript</li>
+              <li>TypeScript</li>
+              <li>HTML</li>
+              <li>CSS</li>
+            </ul>
+            <hr />
+            <h4>Frameworks</h4>
+            <ul>
+              <li>Spring</li>
+              <li>Angular</li>
+            </ul>
+            <hr />
+          </div>
+          <p class="formacion">
+            He terminado el Grado Superior en Desarrollo de Aplicaciones
+            Multiplataforma en CESUR, con especialización Fullstack. Mi
+            formación abarcó todo el ciclo de vida del software, desde el
+            análisis y diseño hasta la implementación, pruebas y mantenimiento.
+            También adquirí experiencia en diseño de arquitecturas, trabajo en
+            equipo con metodologías ágiles, integración de sistemas y
+            optimización de procesos.
+          </p>
+        </section>
+        <section id="worktogether">
+          <h2 class="titulowork">Porque trabajar juntos</h2>
+          <div class="motivos">
+            <div class="motivo" id="motivo1">
+              <h1 class="num">1</h1>
+              <div class="mot">
+                <h5>Professional</h5>
+                <p>
+                  Coverton College, New Orleans Concentration: Film Analysis
+                  Cinematic Storytelling
+                </p>
+              </div>
+            </div>
+            <div class="motivo" id="motivo2">
+              <h1 class="num">2</h1>
+              <div class="mot">
+                <h5>Professional</h5>
+                <p>
+                  Coverton College, New Orleans Concentration: Film Analysis
+                  Cinematic Storytelling
+                </p>
+              </div>
+            </div>
+            <div class="motivo" id="motivo3">
+              <h1 class="num">3</h1>
+              <div class="mot">
+                <h5>Professional</h5>
+                <p>
+                  Coverton College, New Orleans Concentration: Film Analysis
+                  Cinematic Storytelling
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact">
+          <div class="formulario">
+            <h3>Recibe mi CV</h3>
+
+            <form action="https://api.web3forms.com/submit" method="POST">
+              <input
+                type="hidden"
+                name="access_key"
+                value="8d2d94da-112e-4ba6-bbb5-ab7b48c46d4d"
+              />
+
+              <label for="name">Nombre</label>
+              <input type="text" name="name" required />
+              <label for="empresa">Empresa</label>
+              <input type="text" name="empresa" required />
+              <label for="email">Email</label>
+              <input type="email" name="email" required />
+              <label for="message">Mensaje</label>
+              <textarea name="message"></textarea>
+
+              <input
+                type="checkbox"
+                name="botcheck"
+                class="hidden"
+                style="display: none"
+              />
+
+              <button type="submit" class="btn">Solicitar</button>
+            </form>
+          </div>
+          <div class="thanks">Thank you</div>
+          <div class="social">
+            <a
+              href="https://www.linkedin.com/in/sebastianzaruha"
+              target="_blank"
+            >
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/SebastianZaruha"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+          </div>
+          <div class="footer">
+            <p>© Sebastian Zaruha 2025</p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,218 @@
+body {
+  background-image: url(src/Fondo.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  height: 100vh;
+  scroll-behavior: smooth;
+  overflow: hidden;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+.escena {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 100px 1fr 300px 100px;
+  grid-template-rows: 100px 1fr 100px;
+}
+
+.navegar {
+  grid-area: 2/3/3/4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.secciones {
+  grid-area: 2/2/3/3;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow-y: scroll;
+  height: 100%;
+  padding: 200px;
+}
+
+.secciones::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+.secciones {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+section {
+  min-height: 100vh;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.background-image {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+#conocimientos {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 100px 1fr 1fr;
+}
+
+.tituloconocimientos {
+  grid-column-start: 1;
+}
+.tecnico {
+  grid-row: 2;
+  grid-column: 4 / 6;
+}
+.formacion {
+  margin-top: 60px;
+  grid-row-start: 3;
+  grid-column: 1/4;
+  margin: 50px;
+}
+
+.background-image img {
+  width: 100%;
+  max-width: 400px;
+}
+
+.worktogether {
+  display: flex;
+  flex-direction: column;
+}
+.titulowork {
+  display: flex;
+  justify-content: flex-end;
+  grid-column: 1 / 8;
+  grid-row-start: 1;
+}
+.motivos {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+.motivo {
+  display: flex;
+}
+#motivo1 {
+  grid-column: 1 / 4;
+  grid-row: 1 / 2;
+}
+#motivo2 {
+  grid-column: 3 / 6;
+  grid-row: 2 / 3;
+}
+#motivo3 {
+  grid-column: 5 / 8;
+  grid-row: 3 / 4;
+}
+.num {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 100px;
+  margin-right: 20px;
+}
+
+.text-content {
+  margin-top: 20px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-size: large;
+  border-left: 1px solid #000;
+  padding-left: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover {
+  transform: scale(1.1);
+  transition: 0.2s ease-in-out;
+}
+
+.tituloconocimientos,
+.titulowork {
+  text-align: center;
+  font-size: 2rem;
+  margin: 30px 0;
+}
+
+.tecnico {
+  margin: 20px 0;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.thanks {
+  margin-top: 30px;
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  background-color: rgb(230, 230, 230);
+  width: 300px;
+  height: 400px;
+  padding: 20px;
+  border-radius: 15px;
+}
+.btn {
+  background-color: #999999;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  width: 100px;
+  align-self: center;
+}
+input {
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  height: 30px;
+}
+
+.btn:hover {
+  background-color: #666666;
+}
+.social {
+  margin-top: 300px;
+  font-size: 50px;
+}
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid black;
+}
